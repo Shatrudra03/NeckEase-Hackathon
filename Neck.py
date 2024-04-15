@@ -2,6 +2,7 @@ import cv2
 import mediapipe as mp
 import time
 import math
+# Code for algo for neckease
 
 # Initialize MediaPipe Pose class.
 mp_pose = mp.solutions.pose
