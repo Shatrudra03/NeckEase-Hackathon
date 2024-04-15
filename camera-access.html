@@ -1,0 +1,77 @@
+<!-- camera-access.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Access - NeckEase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+            background-size: cover; /* Ensure the background image covers the entire viewport */
+            background-position: center; /* Center the background image */
+            color: #ffffff; /* Text color on top of the background image */
+        }
+
+        h2 {
+            color: #333333; /* Dark gray heading color */
+        }
+
+        .popup {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           /* Light gray background */
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #cameraStatus {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green; /* Green color for success message */
+        }
+    </style>
+</head>
+<body>
+
+<h2>Camera Access</h2>
+<div class="popup">
+    <p style="color: black;">Allow access to your camera?</p>
+    <button onclick="allowCameraAccess()">Allow</button>
+    <button onclick="denyCameraAccess()">Deny</button>
+</div>
+
+<p id="cameraStatus"></p>
+
+<script>
+    function allowCameraAccess() {
+        // Simulate camera access
+        document.getElementById('cameraStatus').textContent = 'Camera is now being accessed.';
+    }
+
+    function denyCameraAccess() {
+       
+        document.getElementById('cameraStatus').textContent = 'Camera can not be accessed by Host';
+    }
+</script>
+
+</body>
+</html>

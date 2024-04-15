@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeckEase - Improve Your Posture</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1491895200222-0fc4a4c35e18?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVkaWNhbCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D');
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #000000; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 1; /* Ensure header is above other content */
+        }
+
+        .logo {
+            font-size: 32px; /* Larger font size for the logo */
+            font-weight: Extra bold;
+            color: #ff6b6b; /* Red color for an aggressive look */
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            border: 1px solid #ffffff; /* White border for buttons */
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background on hover */
+        }
+
+        .menu-icon {
+            display: none; /* Hide by default on larger screens */
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* Calculate height to fill viewport excluding header */
+            position: relative;
+            z-index: 0; /* Set content below header */
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+           /* Semi-transparent black background for main content */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .headline {
+            color: black;
+            max-width: 50%; /* Limit width of headline text */
+        }
+
+        .description {
+            color: #111111;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .image-container {
+            max-width: 50%;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .features {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            max-width: 45%;
+        }
+
+        .feature img {
+            max-width: 50%; /* Adjust image width */
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px; /* Add spacing between image and description */
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide nav links on smaller screens by default */
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                padding: 20px;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 2; /* Ensure nav links are above other content */
+            }
+
+            .nav-links.active {
+                display: flex; /* Show nav links when active (clicked on menu icon) */
+            }
+
+            .menu-icon {
+                display: block; /* Show menu icon on smaller screens */
+            }
+
+            .content-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .headline,
+            .description,
+            .image-container img {
+                max-width: 100%; /* Adjust max-width for smaller screens */
+                margin-right: 0; /* Remove right margin */
+                margin-bottom: 20px; /* Add spacing below elements */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="logo" style="color: rgb(130, 188, 174);">NeckEase</h1>
+    <div class="menu-icon">&#9776;</div> <!-- Hamburger menu icon -->
+    <ul class="nav-links">
+        <li><a href="NeckEase.html">Explore Neck Exercises</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</header>
+
+<main>
+    <!-- Your main content goes here -->
+    <div class="content-container">
+        <div class="content">
+            <div class="main-content">
+                <h1 class="headline" style="color: black;">Move More
+                    Feel Better with <strong>NeckEase.</strong></h1>
+                <p class="description" style="color: #141414;">
+                    Experience the transformative benefits of NeckEase, our innovative solution designed to track and improve neck movement to prevent cervicalgia (neck pain). Empower yourself to prioritize good posture and well-being with NeckEase.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="https://assets-global.website-files.com/6426b3c93b202d462e4fcc9c/65a3672f6aa2aff4e9509f3b_cover_app_preview_optimized.png" alt="NeckEase Image">
+            </div>
+        </div>
+    </div>
+    <h2 style="color: #000000; margin-top: 40px;">Made for busy desk workers who...</h2>
+    <div class="features">
+        <div class="feature">
+           
+            <br>
+            <br>
+         
+            <div>
+                <img src="https://assets-global.website-files.com/6426b3c93b202d462e4fcc9c/6450ccc669680c3b217485d4_Group%20359.png" alt="Desk Worker Image">
+            </div>
+            <p style="color: #000000;">Get so involved in work and often forget to take breaks to move.</p>
+        </div>
+        <div class="feature">
+            <div>
+                <img src="https://assets-global.website-files.com/6426b3c93b202d462e4fcc9c/6450ccc669680c3b217485d4_Group%20359.png" alt="Desk Worker Image">
+            </div>
+            <p style="color: #000000;">Suffer from physical pain or tension in the body, as well as mental stress.</p>
+
+          
+        </div>
+      
+    </div>
+    <br><br><br><br><br>
+    <a  href="aggreement.html"><button style="width: 150px; height: 50px; font-size: 16px;">GET STARTED</button></a>
+   
+</main>
+
+<script>
+    // Toggle nav links visibility on menu icon click
+    const menuIcon = document.querySelector('.menu-icon');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
